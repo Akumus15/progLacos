@@ -6,6 +6,23 @@ como maior, nem como menor, e nem na contagem da média.
 '''
 
 num = int(input("Informe um número: "))
+div = 0
+
+if (num != -1):
+    med = num
+    maior = num
+    menor = num
 
 while (num != -1):
     num = int(input("Informe um número: "))
+
+    if num != -1:
+        med = med + num
+    if num != -1:
+        div = div + 1
+    if maior < num and num != -1:
+        maior = num
+    if menor > num and num != -1:
+        menor = num
+
+print(f"O maior número é {maior} e o menor é {menor} e a média é de {med / div}")
